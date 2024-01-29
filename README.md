@@ -19,5 +19,9 @@
     ```
     npm run start:dev
     ```
-7. 
+7. Ejecutar SEED
+   ```
+   POST http://localhost:3000/api/seed
+   ```
+8. 
    
