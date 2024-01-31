@@ -9,7 +9,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { DataSource, Repository } from 'typeorm';
 
 import { CreateProductDto, UpdateProductDto } from './dto';
-import { PaginationDto } from 'src/common/dto/pagination.dto';
+import { PaginationDto } from '../common/dto/pagination.dto';
 
 import { ProductImage, Product } from './entities';
 import { isUUID } from 'class-validator';
