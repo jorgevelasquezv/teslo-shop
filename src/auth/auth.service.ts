@@ -61,6 +61,13 @@ export class AuthService {
     return { ...user, token: this.generateJWT({ id: user.id }) };
   }
 
+  async checkAuthStatus(user: User) {
+    const { id } = user;
+    delete user.roles;
+    delete user.isActive;
+    return { ...user, token: this.generateJWT({ id }) };
+  }
+
   private generateJWT(jwtPayload: JwtPayload): string {
     const token = this.jwtService.sign(jwtPayload);
     return token;
